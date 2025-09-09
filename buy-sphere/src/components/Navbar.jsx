@@ -5,7 +5,7 @@ import { assets } from './assets'
 const Navbar = () => {
   return (
     <div className='flex items-center justify-between font-medium mx-7'>
-        <img  src={assets.logo} className='w-24 ' alt="" />
+        <Link to={"/"}><img  src={assets.logo} className='w-24 ' alt="" /></Link>
         <ul className='hidden sm:flex gap-5 text-sm text-gray-700'>
        <NavLink to="/" className='flex flex-col items-center  hover:text-indigo-600 gap-1'><li>Home</li><hr className='w-2/4 border-none h-[1.5px] hover:bg-indigo-600 bg-gray-700  hidden '/></NavLink>
        <NavLink to="/Collections" className='flex flex-col hover:text-indigo-600 items-center gap-1'><li>Collections</li><hr className='w-2/4 border-none hover:bg-indigo-600 h-[1.5px] bg-gray-700 hidden '/></NavLink>

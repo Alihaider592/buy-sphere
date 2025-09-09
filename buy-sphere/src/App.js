@@ -10,7 +10,10 @@ import Login from './pages/Login'
 import Order from './pages/Order'
 import Placeorder from './pages/Placeorder'
 import Product from './pages/Product'
+import Footer from './components/Footer';
+import Searchbar from './components/Searchbar';
 import { createBrowserRouter,RouterProvider } from 'react-router-dom'
+import Productitem from './components/Productitem';
 const App = () => {
   const router = createBrowserRouter([
     {
@@ -49,10 +52,17 @@ const App = () => {
       path :'/Product',
       element :<><Navbar/><Product/></>,
     },
-  ])
+    {
+    path: "/product",   
+    element: <Productitem />,
+  },
+],
+);
   return (
     <div>
       <><RouterProvider router= {router}/></>
+      <Searchbar/>
+      <Footer/>
     </div>
   )
 }
