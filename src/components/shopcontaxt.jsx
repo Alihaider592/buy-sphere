@@ -1,22 +1,19 @@
-import { createContext } from "react";
-import { products as productData } from "./Products"; 
-import ShopBy from "./ShopBy";
+import React, { createContext, useState } from "react";
+import { products } from "./Products";   
 export const ShopContaxt = createContext();
-
-export const ShopContaxtProvider = ({ children }) => {
+export const ShopContextProvider = ({children}) =>{
   const currency = '$';
-  const Sybtitle ="";
-  const dilivery_fee = '20';
-  const products = productData;
-
-  const value = { currency,Sybtitle, dilivery_fee, products };
-
+  const dalivery_fee=10;
+    const [search,setsearch] = useState('');
+  const [showserach,setshowsearch] = useState(true);
+  const value ={
+      products,currency,dalivery_fee,search,setsearch,
+      showserach,setshowsearch
+  }
+  
   return (
-    <ShopContaxt.Provider value={value}>
+    <ShopContaxt.Provider value = { value }>
       {children}
     </ShopContaxt.Provider>
   );
-};
-
-// }
-
+}

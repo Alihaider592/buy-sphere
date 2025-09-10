@@ -2,8 +2,8 @@ import T from '../assets/T.png';
 import T2 from '../assets/T2.png';
 import T10 from '../assets/T10.jpg';
 import T3 from '../assets/T3.png';
-import T4 from '../assets/T4.jpg';
 import T9 from '../assets/T4.png';
+import T4 from '../assets/T4.jpg';
 import T5 from '../assets/T5.png';
 import T6 from '../assets/T6.jpg';
 import T7 from '../assets/T7.jpg';
@@ -28,59 +28,36 @@ import p3 from '../assets/p3.webp';
 import p4 from '../assets/p4.jpg';
 import p5 from '../assets/p5.jpg';
 import p6 from '../assets/p6.jpg';
+
 export const products = [
-  {_id:11,_image:[w1], _title:"Watches", _name:"Gents Watch", _Subtitle:"Smart & Stylish"},
-  {_id:20,_image:[s1], _title:"Shoes" ,_name:"Sneakers", _Subtitle:"Step in Style"},
-  {_id:29,_image:[p5], _title:"Jeans" ,_name:"Jeans", _Subtitle:"Classic Denim"},
-  {_id:2, _image:[T2],_title:"Shirts", _name:"Shirts", _Subtitle:"Everyday Comfort"},
-  {_id:28,_image:[p4], _name:"Hat", _price:18},
-  {_id:3, _image:[T10], _name:"Jacket", _price:50},
-  {_id:4, _image:[T3], _name:"Hoodie", _price:40},
-  {_id:5, _image:[T4], _name:"Sweater", _price:35},
-  {_id:6, _image:[T9], _name:"Polo", _price:28},
-  {_id:23,_image:[s4], _name:"Heels", _price:60},
-  {_id:7, _image:[T5], _name:"Jeans", _price:45},
-  {_id:1, _image:[T], _name:"T-shirt", _price:25},
-  {_id:8, _image:[T6], _name:"Shorts", _price:20},
-  {_id:9, _image:[T7], _name:"Skirt", _price:33},
-  {_id:10,_image:[T8], _name:"Blazer", _price:55},
-  {_id:12,_image:[w2], _name:"Dress", _price:40},
-  {_id:13,_image:[w3], _name:"Jumpsuit", _price:50},
-  {_id:14,_image:[w4], _name:"Cardigan", _price:35},
-  {_id:15,_image:[w5], _name:"Coat", _price:60},
-  {_id:16,_image:[w6], _name:"Skirt", _price:30},
-  {_id:17,_image:[w7], _name:"Blouse", _price:28},
-  {_id:18,_image:[w8], _name:"Trousers", _price:45},
-  {_id:19,_image:[w9], _name:"Leggings", _price:20},
-  {_id:21,_image:[s2], _name:"Boots", _price:70},
-  {_id:22,_image:[s3], _name:"Sandals", _price:25},
-  {_id:24,_image:[s5], _name:"Loafers", _price:40},
-  {_id:25,_image:[p1], _name:"Bag", _price:35},
-  {_id:26,_image:[p2], _name:"Wallet", _price:20},
-  {_id:27,_image:[p3], _name:"Belt", _price:15},
-  {_id:30,_image:[p6], _name:"Scarf", _price:12}
+  { _id: 11, _image: [w1],subcategory:"Topwear",sizes:["M","L","XL"], _price: 35, _title: "Watches", _name: "Men - Gents Watch", _Subtitle: "Smart & Stylish" ,category:"men",description:'Product text describes a product to sell it by focusing on customer benefits rather than just features, telling a story, using sensory language, adding social proof, and speaking directly to your target audience. Key types of product text include product descriptions, blog articles, and reviews, which all aim to inform potential buyers and persuade them to purchase' },
+  {sizes:["M","L","XL"], _id: 20, _image: [s1], _price: 55, _title: "Shoes",subcategory:"bottom wear", _name: "Men - Sneakers", _Subtitle: "Step in Style" ,category:"men" ,description:'Product text describes a product to sell it by focusing on customer benefits rather than just features, telling a story, using sensory language, adding social proof, and speaking directly to your target audience. Key types of product text include product descriptions, blog articles, and reviews, which all aim to inform potential buyers and persuade them to purchase'},
+  {sizes:["M","L","XL"], _id: 29, _image: [p5],subcategory:"winter wear", _price: 25, _title: "Jeans", _name: "Men - Jeans", _Subtitle: "Classic Denim" ,category:"women",description:'Product text describes a product to sell it by focusing on customer benefits rather than just features, telling a story, using sensory language, adding social proof, and speaking directly to your target audience. Key types of product text include product descriptions, blog articles, and reviews, which all aim to inform potential buyers and persuade them to purchase' },
+  {sizes:["M","L","XL"], _id: 2, _image: [T2],subcategory:"Topwear", _price: 38, _title: "Shirts", _name: "Men - Shirts", _Subtitle: "Everyday Comfort" ,category:"men", description:'Product text describes a product to sell it by focusing on customer benefits rather than just features, telling a story, using sensory language, adding social proof, and speaking directly to your target audience. Key types of product text include product descriptions, blog articles, and reviews, which all aim to inform potential buyers and persuade them to purchase'},
+  {sizes:["M","L","XL"], _id: 15, _image: [w5],subcategory:"Topwear", _price: 30, _title: "Coat", _name: "Men - Coat", _Subtitle: "Smart & Stylish" ,category:"men", description:'Product text describes a product to sell it by focusing on customer benefits rather than just features, telling a story, using sensory language, adding social proof, and speaking directly to your target audience. Key types of product text include product descriptions, blog articles, and reviews, which all aim to inform potential buyers and persuade them to purchase'},
+  {sizes:["M","L","XL"], _id: 1, _image: [T],subcategory:"Topwear", _name: "Men Round pure cotton T-shirt", _price: 25 ,category:"men",description:'Product text describes a product to sell it by focusing on customer benefits rather than just features, telling a story, using sensory language, adding social proof, and speaking directly to your target audience. Key types of product text include product descriptions, blog articles, and reviews, which all aim to inform potential buyers and persuade them to purchase' },
+  {sizes:["M","L","XL"], _id: 26, _image: [p2],subcategory:"bottom wear", _name: "Men Round pure cotton T-shirt", _price: 20 ,category:"men" ,description:'Product text describes a product to sell it by focusing on customer benefits rather than just features, telling a story, using sensory language, adding social proof, and speaking directly to your target audience. Key types of product text include product descriptions, blog articles, and reviews, which all aim to inform potential buyers and persuade them to purchase'},
+  {sizes:["M","L","XL"], _id: 25, _image: [p1],subcategory:"winter wear", _name: "Men - Bag", _price: 35 ,category:"men",description:'Product text describes a product to sell it by focusing on customer benefits rather than just features, telling a story, using sensory language, adding social proof, and speaking directly to your target audience. Key types of product text include product descriptions, blog articles, and reviews, which all aim to inform potential buyers and persuade them to purchase' },
+  {sizes:["M","L","XL"], _id: 3, _image: [T10],subcategory:"Topwear", _name: "Men Round pure cotton T-shirt", _price: 50, bestseller: true   ,category:"men",description:'Product text describes a product to sell it by focusing on customer benefits rather than just features, telling a story, using sensory language, adding social proof, and speaking directly to your target audience. Key types of product text include product descriptions, blog articles, and reviews, which all aim to inform potential buyers and persuade them to purchase'},
+  {sizes:["M","L","XL"], _id: 4, _image: [T3],subcategory:"Topwear", _name: "Men Round pure cotton T-shirt", _price: 40,  bestseller: true ,category:"men",description:'Product text describes a product to sell it by focusing on customer benefits rather than just features, telling a story, using sensory language, adding social proof, and speaking directly to your target audience. Key types of product text include product descriptions, blog articles, and reviews, which all aim to inform potential buyers and persuade them to purchase' },
+  {sizes:["M","L","XL"], _id: 5, _image: [T4],subcategory:"Topwear", _name: "Men Round pure cotton T-shirt", _price: 35, bestseller: true ,category:"men" ,description:'Product text describes a product to sell it by focusing on customer benefits rather than just features, telling a story, using sensory language, adding social proof, and speaking directly to your target audience. Key types of product text include product descriptions, blog articles, and reviews, which all aim to inform potential buyers and persuade them to purchase'},
+  {sizes:["M","L","XL"], _id: 6, _image: [T9],subcategory:"Topwear", _name: "Men Round pure cotton T-shirt", _price: 28, bestseller: true ,category:"men",description:'Product text describes a product to sell it by focusing on customer benefits rather than just features, telling a story, using sensory language, adding social proof, and speaking directly to your target audience. Key types of product text include product descriptions, blog articles, and reviews, which all aim to inform potential buyers and persuade them to purchase' },
+  {sizes:["M","L","XL"], _id: 23, _image: [s4],subcategory:"bottom wear", _name: "Women - Heels", _price: 60, bestseller: true ,category:"women",description:'Product text describes a product to sell it by focusing on customer benefits rather than just features, telling a story, using sensory language, adding social proof, and speaking directly to your target audience. Key types of product text include product descriptions, blog articles, and reviews, which all aim to inform potential buyers and persuade them to purchase' },
+  {sizes:["M","L","XL"], _id: 7, _image: [T5],subcategory:"Topwear", _name: "Men Round pure cotton T-shirt", _price: 45, bestseller: true ,category:"men",description:'Product text describes a product to sell it by focusing on customer benefits rather than just features, telling a story, using sensory language, adding social proof, and speaking directly to your target audience. Key types of product text include product descriptions, blog articles, and reviews, which all aim to inform potential buyers and persuade them to purchase' },
+  {sizes:["M","L","XL"], _id: 8, _image: [T6],subcategory:"Topwear", _name: "Men Round pure cotton T-shirt", _price: 20 ,category:"men",description:'Product text describes a product to sell it by focusing on customer benefits rather than just features, telling a story, using sensory language, adding social proof, and speaking directly to your target audience. Key types of product text include product descriptions, blog articles, and reviews, which all aim to inform potential buyers and persuade them to purchase' },
+  {sizes:["M","L","XL"], _id: 28, _image: [p4],subcategory:"winter wear", _name: "Men Round pure cotton T-shirt", _price: 18, bestseller: true ,category:"men" ,description:'Product text describes a product to sell it by focusing on customer benefits rather than just features, telling a story, using sensory language, adding social proof, and speaking directly to your target audience. Key types of product text include product descriptions, blog articles, and reviews, which all aim to inform potential buyers and persuade them to purchase'},
+  {sizes:["M","L","XL"], _id: 9, _image: [T7],subcategory:"Topwear", _name: "Men Round pure cotton T-shirt", _price: 33  ,category:"men",description:'Product text describes a product to sell it by focusing on customer benefits rather than just features, telling a story, using sensory language, adding social proof, and speaking directly to your target audience. Key types of product text include product descriptions, blog articles, and reviews, which all aim to inform potential buyers and persuade them to purchase' },
+  {sizes:["M","L","XL"], _id: 10, _image: [T8],subcategory:"Topwear", _name: "Men Round pure cotton T-shirt", _price: 55, bestseller: true ,description:'Product text describes a product to sell it by focusing on customer benefits rather than just features, telling a story, using sensory language, adding social proof, and speaking directly to your target audience. Key types of product text include product descriptions, blog articles, and reviews, which all aim to inform potential buyers and persuade them to purchase'},
+  {sizes:["M","L","XL"], _id: 12, _image: [w2],subcategory:"Topwear", _name: "Women - Dress", _price: 40 ,category:"women",description:'Product text describes a product to sell it by focusing on customer benefits rather than just features, telling a story, using sensory language, adding social proof, and speaking directly to your target audience. Key types of product text include product descriptions, blog articles, and reviews, which all aim to inform potential buyers and persuade them to purchase' },
+  {sizes:["M","L","XL"], _id: 13, _image: [w3],subcategory:"Topwear", _name: "Women - Jumpsuit", _price: 50, bestseller: true ,description:'Product text describes a product to sell it by focusing on customer benefits rather than just features, telling a story, using sensory language, adding social proof, and speaking directly to your target audience. Key types of product text include product descriptions, blog articles, and reviews, which all aim to inform potential buyers and persuade them to purchase'},
+  {sizes:["M","L","XL"], _id: 14, _image: [w4],subcategory:"Topwear", _name: "Women - Cardigan", _price: 35 ,category:"women",description:'Product text describes a product to sell it by focusing on customer benefits rather than just features, telling a story, using sensory language, adding social proof, and speaking directly to your target audience. Key types of product text include product descriptions, blog articles, and reviews, which all aim to inform potential buyers and persuade them to purchase'},
+  {sizes:["M","L","XL"], _id: 16, _image: [w6],subcategory:"Topwear", _name: "Women - Skirt", _price: 30 ,category:"women" ,description:'Product text describes a product to sell it by focusing on customer benefits rather than just features, telling a story, using sensory language, adding social proof, and speaking directly to your target audience. Key types of product text include product descriptions, blog articles, and reviews, which all aim to inform potential buyers and persuade them to purchase'},
+  {sizes:["M","L","XL"], _id: 17, _image: [w7],subcategory:"Topwear", _name: "Women - Blouse", _price: 28 ,category:"women" ,description:'Product text describes a product to sell it by focusing on customer benefits rather than just features, telling a story, using sensory language, adding social proof, and speaking directly to your target audience. Key types of product text include product descriptions, blog articles, and reviews, which all aim to inform potential buyers and persuade them to purchase'},
+  {sizes:["M","L","XL"], _id: 18, _image: [w8],subcategory:"Topwear", _name: "Men - Trousers", _price: 45 ,category:"men",description:'Product text describes a product to sell it by focusing on customer benefits rather than just features, telling a story, using sensory language, adding social proof, and speaking directly to your target audience. Key types of product text include product descriptions, blog articles, and reviews, which all aim to inform potential buyers and persuade them to purchase'},
+  {sizes:["M","L","XL"], _id: 19, _image: [w9],subcategory:"Topwear", _name: "Women - Leggings", _price: 20, bestseller: true ,description:'Product text describes a product to sell it by focusing on customer benefits rather than just features, telling a story, using sensory language, adding social proof, and speaking directly to your target audience. Key types of product text include product descriptions, blog articles, and reviews, which all aim to inform potential buyers and persuade them to purchase'},
+  {sizes:["M","L","XL"], _id: 21, _image: [s2],subcategory:"bottom wear", _name: "Men - Boots", _price: 70 ,category:"kids" ,description:'Product text describes a product to sell it by focusing on customer benefits rather than just features, telling a story, using sensory language, adding social proof, and speaking directly to your target audience. Key types of product text include product descriptions, blog articles, and reviews, which all aim to inform potential buyers and persuade them to purchase'},
+  {sizes:["M","L","XL"], _id: 22, _image: [s3],subcategory:"winter wear", _name: "Men - Sandals", _price: 25 ,category:"kids" ,description:'Product text describes a product to sell it by focusing on customer benefits rather than just features, telling a story, using sensory language, adding social proof, and speaking directly to your target audience. Key types of product text include product descriptions, blog articles, and reviews, which all aim to inform potential buyers and persuade them to purchase'},
+  {sizes:["M","L","XL"], _id: 24, _image: [s5],subcategory:"bottom wear", _name: "Men - Loafers", _price: 40 ,category:"kids" ,description:'Product text describes a product to sell it by focusing on customer benefits rather than just features, telling a story, using sensory language, adding social proof, and speaking directly to your target audience. Key types of product text include product descriptions, blog articles, and reviews, which all aim to inform potential buyers and persuade them to purchase'},
+  {sizes:["M","L","XL"], _id: 27, _image: [p3],subcategory:"winter wear", _name: "Men - Belt", _price: 15 ,category:"kids" ,description:'Product text describes a product to sell it by focusing on customer benefits rather than just features, telling a story, using sensory language, adding social proof, and speaking directly to your target audience. Key types of product text include product descriptions, blog articles, and reviews, which all aim to inform potential buyers and persuade them to purchase'},
+  {sizes:["M","L","XL"], _id: 30, _image: [p6],subcategory:"bottom wear",  _name: "Men - Scarf", _price: 12 ,category:"kids" ,description:'Product text describes a product to sell it by focusing on customer benefits rather than just features, telling a story, using sensory language, adding social proof, and speaking directly to your target audience. Key types of product text include product descriptions, blog articles, and reviews, which all aim to inform potential buyers and persuade them to purchase'},
 ];
-export const product=[
-    {
-        id : "aaaaa",
-        Name :"Women Round Neck cotton Top",
-        Discription :"A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
-        image :"[p5.jpg]",
-        category :"Women",
-        SubCategory:"Topwear",
-        Sizes:["S","M","L"],
-        Date:1231241434,
-        bestseller:true
-    },
-    {
-        id : "aaaaab",
-        Name :"Men Printed Plain Cotton Shirt",
-        Discription :"A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
-        image :"[T4.jpg,T8.jpg,T5.png,T7.jpg ]",
-        category :"Man",
-        SubCategory:"Topwear",
-        Sizes:["S","M","L"],
-        Date:1231241434,
-        bestseller:true
-    },
-]
