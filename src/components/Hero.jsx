@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <div className="flex flex-col h-auto md:flex-row items-center justify-center bg-gradient-to-r from-indigo-500 to-purple-500 px-6 md:px-12 py-10 md:py-16 lg:py-20 xl:py-24 max-h-screen gap-y-8 md:gap-y-0 md:gap-x-8 lg:gap-x-16 xl:gap-x-24 2xl:gap-x-32">
       
-      
+
       {/* Hero Left */}
       <div className="w-full md:w-1/2 text-white text-center md:text-left">
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
@@ -36,6 +36,7 @@ const Hero = () => {
             object-contain
           "
         />
+        <p>i am here</p>
       </div>
     </div>
   )
