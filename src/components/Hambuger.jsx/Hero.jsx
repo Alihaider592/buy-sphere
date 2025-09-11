@@ -30,7 +30,7 @@ const Hero = () => {
           <button className="w-full sm:w-auto mt-5 py-2.5 px-4 rounded-lg text-indigo-500 font-bold bg-white hover:bg-gray-200 transition text-xs sm:text-sm lg:text-base">
             Shop Now
           </button>
-          <button className="w-full sm:w-auto py-3.5 px-5 ml-8 max-sm:ml-0 max-sm:mt-5 rounded-lg border-[3px] border border-white text-white hover:bg-gray-100 hover:text-indigo-500 font-bold transition text-xs sm:text-sm lg:text-base">
+          <button className="w-full sm:w-auto py-3.5 px-5 ml-8 rounded-lg border-[3px] border border-white text-white hover:bg-gray-100 hover:text-indigo-500 font-bold transition text-xs sm:text-sm lg:text-base">
             View Deals
           </button>
         {/* </div> */}

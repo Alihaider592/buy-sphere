@@ -41,8 +41,8 @@ import w6 from '../assets/w6.jpg'
 import w7 from '../assets/w7.png'
 import w8 from '../assets/w8.jpg'
 import w9 from '../assets/w9.jpg'
-import star from '../assets/star.jpeg'
-import dullstar from '../assets/blankstar.jpeg'
+import star from '../assets/star.jpeg';
+import dullstar from '../assets/blankstar.jpeg';
 import serach from '../assets/searchicon.png'
 import heart from '../assets/hearticon.jpeg'
 import backicon from '../assets/backicon.jpeg'
@@ -53,6 +53,6 @@ import dropdown from  '../assets/dropdownicon.jpeg'
 import { Cross } from 'hamburger-react'
 export const assets = {
     carticon,filltericon,gt1,k1,k2,k3,kt1,kt2,kt3,kt4,logo,p1,p2,p3,p4,p5,p6,profileicon,
-    s1,s2,s3,s4,s5,seachicon,T,T10,T2,T3,T4,T9,T5,T6,T8,T7,w1,w2,w3,w4,w5,w6,w7,w8,w9,heart,backicon,chang,Return,customer,
-    dropdown,Cross,star,dullstar,serach
+    s1,s2,s3,s4,s5 ,dropdown,Cross,seachicon,T,T10,T2,T3,T4,T9,T5,T6,T8,T7,w1,w2,w3,w4,w5,w6,w7,w8,w9,heart,backicon,chang,Return,customer,
+    dullstar,star,serach
 } 

@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Hamburgercomponents from '../components/Hambuger.jsx/Hamburger'
 import { Link,NavLink } from 'react-router-dom'
 import { assets } from './assets'
+import { ShopContaxt } from './shopcontaxt'
 const Navbar = () => {
+  const {getcartcount} = useContext(ShopContaxt);
   return (
     <div className='flex items-center justify-between font-medium mx-7'>
         <Link to={"/"}><img  src={assets.logo} className='w-24 ' alt="" /></Link>
@@ -25,7 +27,7 @@ const Navbar = () => {
     </div>
     </div> 
            <Link to="/Cart" className='relative'><img src={assets.heart} className='w-8 min-w-8 h-8' alt="" /><p className='absolute right-[-5px] top-[-4px] place-content-center text-center w-5 h-5 text-white font-bold   leading-4 bg-red-600 rounded-full text-[9px]'>12</p></Link>
-       <Link to="/Cart" className='relative'><img src={assets.carticon} className='w-8 min-w-8 h-8' alt="" /><p className='absolute right-[-5px] top-[-4px] place-content-center text-center w-5 h-5 text-white font-bold   leading-4 bg-blue-600 rounded-full text-[9px]'>12</p></Link>
+       <Link to="/Cart" className='relative'><img src={assets.carticon} className='w-8 min-w-8 h-8' alt="" /><p className='absolute right-[-5px] top-[-4px] place-content-center text-center w-5 h-5 text-white font-bold   leading-4 bg-blue-600 rounded-full text-[9px]'>{getcartcount()}</p></Link>
        <div className='block sm:hidden'>
        <Hamburgercomponents/>
        </div>

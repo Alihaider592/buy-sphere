@@ -11,31 +11,35 @@ import Order from './pages/Order';
 import Placeorder from './pages/Placeorder';
 import Product from './pages/Product';
 import Footer from './components/Footer';
+ import { ToastContainer, toast } from 'react-toastify';
+ import "react-toastify/dist/ReactToastify.css";
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 const App = () => {
-  const router = createBrowserRouter([
-    { path: '/', element: <><Navbar/><Home/><Footer/></> },
-    { path: '/about', element: <><Navbar/><About/><Footer/></> },
-    { path: '/cart', element: <><Navbar/><Cart/><Footer/></> },
-    { path: '/collections', element: <><Navbar/><Collections/><Footer/></> },
-    { path: '/contact', element: <><Navbar/><Contact/><Footer/></> },
-    { path: '/login', element: <><Navbar/><Login/><Footer/></> },
-    { path: '/order', element: <><Navbar/><Order/><Footer/></> },
-    { path: '/placeorder', element: <><Navbar/><Placeorder/><Footer/></> },
-
-    
-    {
-  path: "/product/:id", 
-  element: <><Navbar/><Product /><Footer/></>,
+  const router = createBrowserRouter(
+    [
+      { path: '/', element: <><Navbar/><Home/><Footer/></> },
+      { path: '/about', element: <><Navbar/><About/><Footer/></> },
+      { path: '/cart', element: <><Navbar/><Cart/><Footer/></> },
+      { path: '/collections', element: <><Navbar/><Collections/><Footer/></> },
+      { path: '/contact', element: <><Navbar/><Contact/><Footer/></> },
+      { path: '/login', element: <><Navbar/><Login/><Footer/></> },
+      { path: '/order', element: <><Navbar/><Order/><Footer/></> },
+      { path: '/placeorder', element: <><Navbar/><Placeorder/><Footer/></> },
+      { path: '/product/:id', element: <><Navbar/><Product/><Footer/></> },
+      {
+        path: "/product/:id",
+        element: <><Navbar/><Product /><Footer/></>,
 }
-
-  ]);
+]);
 
   return (
-    <div>
+    <>
       <RouterProvider router={router} />
-    </div>
+      {/* console.log('ToastContainero is mounted'); */}
+      
+<ToastContainer position='top-right' autoClose={3000}/>
+    </>
   );
 };
 
