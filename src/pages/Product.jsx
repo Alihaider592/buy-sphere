@@ -18,15 +18,16 @@ console.log(id);
 
   return (
     <div>
-      <div className="p-6 flex border-t-2 pt-10 transition-opacity ease-in-out duration-500 opacity-100">
+      <div className="p-6 flex max-sm:flex-col border-t-2 pt-10 transition-opacity ease-in-out duration-500 opacity-100">
       <div>   
            <img
         src={product._image[0]}
         alt={product._name}
-        className="w-auto h-[500px] object-cover mt-4"
+        className="w-auto h-[500px] max-sm:w-52 max-sm:h-52 object-cover mt-4"
       />
-      <div className="mt-20">
-          <div className="flex">
+      
+      <div className="mt-20 max-sm:absolute bottom-[-200px] ">
+          <div className=" max-sm:hidden flex">
           <b className="border px-5 py-3 text-sm">Description</b>
           <p className="border px-5 py-3 text-sm">Reviews (122)</p>
           </div>
@@ -37,7 +38,7 @@ console.log(id);
       <div className="flex items-center gap-1 mt-2">
         <img src={assets.star} alt="" className="w-3.5" />
         <img src={assets.star} alt="" className="w-3.5" />
-        <img src={assets.star} alt="" className="w-3.5" />
+        <img src={assets. star} alt="" className="w-3.5" />
         <img src={assets.star} alt="" className="w-3.5" />
         <img src={assets.dullstar} alt="" className="w-3.5" />
         <p className="pl-2">(122)</p>

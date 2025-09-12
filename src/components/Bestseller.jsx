@@ -8,7 +8,7 @@ const Bestseller = (_id) => {
     const [bestseller,setBestSeller] = useState([]);
     useEffect (()=>{
         const bestProduct = products.filter((item)=>item.bestseller);
-        setBestSeller(bestProduct.slice(0,20))
+        setBestSeller(bestProduct.slice(0,20)) //same issue need to add pagination and filter using context
     },[products])
   return (
       <div className='m-10'>

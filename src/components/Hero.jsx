@@ -17,16 +17,16 @@ const Hero = () => {
 
         {/* Buttons */}
         <div className="mt-6 flex flex-col sm:flex-row sm:justify-center md:justify-start gap-4">
-          <button className="w-full sm:w-auto py-3 px-6 rounded-xl text-indigo-500 font-bold bg-white hover:bg-gray-200 transition">
+          <button className="w-full sm:w-auto py-3 px-6 rounded-xl text-indigo-500  font-bold bg-white hover:bg-gray-200 transition">
             Shop Now
           </button>
-          <button className="w-full sm:w-auto py-3 px-6 rounded-xl border-2 border-white text-white hover:bg-gray-100 hover:text-indigo-500 font-bold transition">
+          <button className="w-full  max-sm:w-auto py-3  px-6 rounded-xl border-2 border-white text-white hover:bg-gray-100 hover:text-indigo-500 font-bold transition">
             View Deals
           </button>
         </div>
       </div>
 
-      {/* Hero Right (Image hidden below md) */}
+      {/* Hero Right  */}
       <div className="hidden md:flex w-full md:w-1/2 justify-center">
         <img
           src={assets.T3}
@@ -36,7 +36,7 @@ const Hero = () => {
             object-contain
           "
         />
-        <p>i am here</p>
+    
       </div>
     </div>
   )

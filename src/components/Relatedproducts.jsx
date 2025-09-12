@@ -2,8 +2,9 @@ import React, { useContext, useEffect, useState } from 'react';
 import { ShopContaxt } from './shopcontaxt';
 import Title from './Title';
 import Productitem from './Productitem';
+import { Link } from 'react-router-dom';
 
-const Relatedproducts = ({ Category, Subcategory }) => {
+const Relatedproducts = ({ id,Category, Subcategory }) => {
   const { products } = useContext(ShopContaxt);
   const [Related, setRelated] = useState([]);
 
@@ -40,6 +41,7 @@ const Relatedproducts = ({ Category, Subcategory }) => {
 
   return (
     <div className="my-24">
+      <Link to={`/product/${id}`}> 
       <div className="text-center text-3xl py-2">
         <Title text1="Related" text2="PRODUCTS" />
       </div>
@@ -61,6 +63,7 @@ const Relatedproducts = ({ Category, Subcategory }) => {
           ))}
         </div>
       )}
+      </Link>
     </div>
   );
 };

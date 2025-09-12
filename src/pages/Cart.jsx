@@ -4,7 +4,9 @@ import Title from "../components/Title";
 
 const Cart = () => {
   const { products, currency, cartitems } = useContext(ShopContaxt);
-  const [cartdata, setcartdata] = useState([]);
+  const [cartdata, setcartdata] = useState( 
+()=> JSON.parse(localStorage.getItem("cart"))||[]
+  );
 
   useEffect(() => {
     const tempdata = [];
@@ -13,7 +15,6 @@ const Cart = () => {
     for (const itemId in cartitems) {
       for (const size in cartitems[itemId]) {
         if (cartitems[itemId][size] > 0) {
-          // find the product by id
           const productDetails = products.find(
             (p) => String(p._id) === String(itemId)
           );
@@ -32,6 +33,7 @@ const Cart = () => {
     }
 console.log(tempdata);
     setcartdata(tempdata);
+    localStorage.setItem("cart",JSON.stringify(tempdata));
   }, [cartitems, products]);
 
   return (
@@ -45,6 +47,7 @@ console.log(tempdata);
         cartdata.map((item, index) => (
           <div key={index} className="border flex p-3 mb-3">
             <img src={item.image} alt={item.name} className="w-24 " />
+            <div className="flex">
             <div className="ml-5">
             <h2 className="font-bold">{item.name}</h2>
             <p>Size: {item.size}</p>
@@ -53,6 +56,10 @@ console.log(tempdata);
               Price: {currency}
               {item.price * item.quantity}
             </p>
+          </div>
+          <div className="flex relative right-4">
+          {/* <img className="w-10 h-10" src='delete.jpeg'/> */}
+          </div>
           </div>
           </div>
         ))

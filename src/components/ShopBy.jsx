@@ -5,13 +5,14 @@ import Shopbyproducts from './shopbyproducts';
 
 const ShopBy = () => {
   const [shopItems, setShopItems] = useState([]);
+  console.log(shopItems )
   const { products } = useContext(ShopContaxt); 
-
+console.log('products',products.length)
   useEffect(() => {
     if (products && products.length > 0) {
       setShopItems(products.slice(0, 5));
     }
-  }, [products]);
+  }, [products]); // use pagination instead of all data calling at once. 
 
   return (
     <div className='my-10  flex-col'>
