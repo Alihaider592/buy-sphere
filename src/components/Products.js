@@ -1,3 +1,4 @@
+// ✅ Imports from your assets
 import T from '../assets/T.png';
 import T2 from '../assets/T2.png';
 import T10 from '../assets/T10.jpg';
@@ -29,13 +30,14 @@ import p4 from '../assets/p4.jpg';
 import p5 from '../assets/p5.jpg';
 import p6 from '../assets/p6.jpg';
 
+// ✅ All products (your original data)
 export const products = [
   {descrition:"Include brand, model, and key features like Automatic Chronograph, Waterproof, and Luxury.",sizes:["M","L","XL"], _id: 11, _image: [w1],subcategory:"Topwear", _price: 35, _title: "Watches", _name: "Men - Gents Watch", _Subtitle: "Smart & Stylish" ,category:"men" },
   {descrition:"comfort features, durability, and intended use (e.g., running, formal, everyday).",sizes:["M","L","XL"], _id: 20, _image: [s1], _price: 55, _title: "Shoes",subcategory:"bottom wear", _name: "Men - Sneakers", _Subtitle: "Step in Style" ,category:"men" },
   {descrition:"Include the brand, fit, and wash, e.g., Men's Straight Fit Dark Wash Denim Jeans.",sizes:["M","L","XL"], _id: 29, _image: [p5],subcategory:"winter wear", _price: 25, _title: "Jeans", _name: "Men - Jeans", _Subtitle: "Classic Denim" ,category:"women" },
   {descrition:"Use descriptive keywords like Classic Fit Cotton Dress Shirt or Slim Fit Casual Button-Down.",sizes:["M","L","XL"], _id: 2, _image: [T2],subcategory:"Topwear", _price: 38, _title: "Shirts", _name: "Men - Shirts", _Subtitle: "Everyday Comfort" ,category:"men" },
   {descrition:"Include brand, model, and key features like Automatic Chronograph, Waterproof, and Luxury.",sizes:["M","L","XL"], _id: 15, _image: [w5],subcategory:"Topwear", _price: 30, _title: "Coat", _name: "Men - Coat", _Subtitle: "Smart & Stylish" ,category:"men" },
-  {descrition:"Use descriptive keywords like Classic Fit Cotton Dress Shirt or Slim Fit Casual Button-Down.",sizes:["M","L","XL"], _id: 1, _image: [T],subcategory:"Topwear", _name: "Men Round pure cotton T-shirt", _price: 25 ,category:"men" ,category:"men" ,},
+  {descrition:"Use descriptive keywords like Classic Fit Cotton Dress Shirt or Slim Fit Casual Button-Down.",sizes:["M","L","XL"], _id: 1, _image: [T],subcategory:"Topwear", _name: "Men Round pure cotton T-shirt", _price: 25 ,category:"men"},
   {descrition:"Include the brand, fit, and wash, e.g., Men's Straight Fit Dark Wash Denim Jeans.",sizes:["M","L","XL"], _id: 26, _image: [p2],subcategory:"bottom wear", _name: "Men Round pure cotton T-shirt", _price: 20 ,category:"men"},
   {descrition:"Include the brand, fit, and wash, e.g., Men's Straight Fit Dark Wash Denim Jeans.",sizes:["M","L","XL"], _id: 25, _image: [p1],subcategory:"winter wear", _name: "Men - Bag", _price: 35 ,category:"men" },
   {descrition:"Use descriptive keywords like Classic Fit Cotton Dress Shirt or Slim Fit Casual Button-Down.",sizes:["M","L","XL"], _id: 3, _image: [T10],subcategory:"Topwear", _name: "Men Round pure cotton T-shirt", _price: 50, bestseller: true   ,category:"men"},
@@ -57,7 +59,23 @@ export const products = [
   {descrition:"Include brand, model, and key features like Automatic Chronograph, Waterproof, and Luxury.",sizes:["M","L","XL"], _id: 19, _image: [w9],subcategory:"Topwear", _name: "Women - Leggings", _price: 20, bestseller: true , },
   {descrition:"Include brand, model, and key features like Automatic Chronograph, Waterproof, and Luxury.",sizes:["M","L","XL"], _id: 21, _image: [s2],subcategory:"bottom wear", _name: "Men - Boots", _price: 70 ,category:"kids" },
   {descrition:"Include brand, model, and key features like Automatic Chronograph, Waterproof, and Luxury.",sizes:["M","L","XL"], _id: 22, _image: [s3],subcategory:"winter wear", _name: "Men - Sandals", _price: 25 ,category:"kids" },
-  {descrition:"Include brand, model, and key features like Automatic Chronograph, Waterproof, and Luxury.",sizes:["M","L","XL"], _id: 24, _image: [s5],subcategory:"bottom wear", _name: "Men - Loafers", _price: 40 ,category:"kids" },
+  {descrition:"Include brand, fit, and wash, e.g., Men's Straight Fit Dark Wash Denim Jeans.",sizes:["M","L","XL"], _id: 24, _image: [s5],subcategory:"bottom wear", _name: "Men - Loafers", _price: 40 ,category:"kids" },
   {descrition:"Include the brand, fit, and wash, e.g., Men's Straight Fit Dark Wash Denim Jeans.",sizes:["M","L","XL"], _id: 27, _image: [p3],subcategory:"winter wear", _name: "Men - Belt", _price: 15 ,category:"kids" },
   {descrition:"Include the brand, fit, and wash, e.g., Men's Straight Fit Dark Wash Denim Jeans.",sizes:["M","L","XL"], _id: 30, _image: [p6],subcategory:"bottom wear",  _name: "Men - Scarf", _price: 12 ,category:"kids" },
+];
+
+// ✅ Split into patches of 6 products each
+export const productsPatch1 = products.slice(0, 6);
+export const productsPatch2 = products.slice(6, 12);
+export const productsPatch3 = products.slice(12, 18);
+export const productsPatch4 = products.slice(18, 24);
+export const productsPatch5 = products.slice(24, 30);
+
+// ✅ For easier pagination (loop through patches)
+export const productPatches = [
+  productsPatch1,
+  productsPatch2,
+  productsPatch3,
+  productsPatch4,
+  productsPatch5,
 ];
