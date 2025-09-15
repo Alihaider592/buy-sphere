@@ -10,9 +10,6 @@ const Relatedproducts = ({ id,Category, Subcategory }) => {
 
   useEffect(() => {
     if (products && products.length > 0) {
-      console.log("🔎 All products:", products);
-      console.log("➡️ Incoming props:", { Category, Subcategory });
-
       let productscopy = [...products];
 
       
@@ -33,7 +30,6 @@ const Relatedproducts = ({ id,Category, Subcategory }) => {
         );
       }
 
-      console.log(productscopy);
 
       setRelated(productscopy.slice(0, 5));
     }
@@ -42,8 +38,8 @@ const Relatedproducts = ({ id,Category, Subcategory }) => {
   return (
     <div className="my-24">
       <Link to={`/product/${id}`}> 
-      <div className="text-center text-3xl py-2">
-        <Title text1="Related" text2="PRODUCTS" />
+      <div className="text-center text-3xl  py-2">
+        <Title text1="RELATED" text2=" PRODUCTS" />
       </div>
 
       {Related.length === 0 ? (
@@ -51,17 +47,21 @@ const Relatedproducts = ({ id,Category, Subcategory }) => {
           No related products found.
         </p>
       ) : (
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 gap-y-6">
-          {Related.map((item, index) => (
-            <Productitem
-              key={index}
-              id={item._id || item.id}
-              name={item.name || item._name}
-              price={item.price || item._price}
-              image={item.image || item._image}
-            />
-          ))}
-        </div>
+       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 gap-y-6 
+                justify-items-center max-sm:justify-items-center max-md:justify-items-center 
+                px-4 sm:px-6 md:px-8 lg:px-10">
+  {Related.map((item, index) => (
+    <Productitem
+      key={index}
+      id={item._id || item.id}
+      name={item.name || item._name}
+      price={item.price || item._price}
+      image={item.image || item._image}
+    />
+  ))}
+</div>
+
+
       )}
       </Link>
     </div>

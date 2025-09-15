@@ -1,5 +1,4 @@
-import React from 'react';
-import { products } from './Products';
+
 import { assets } from './assets';
 const Overpolicy = () => {
   return (

@@ -1,5 +1,4 @@
 import './App.css';
-import React from 'react';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -11,11 +10,12 @@ import Order from './pages/Order';
 import Placeorder from './pages/Placeorder';
 import Product from './pages/Product';
 import Footer from './components/Footer';
- import { ToastContainer, toast } from 'react-toastify';
+ import { ToastContainer} from 'react-toastify';
  import "react-toastify/dist/ReactToastify.css";
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 const App = () => {
+
   const router = createBrowserRouter(
     [
       { path: '/', element: <><Navbar/><Home/><Footer/></> },
@@ -36,8 +36,6 @@ const App = () => {
   return (
     <>
       <RouterProvider router={router} />
-      {/* console.log('ToastContainero is mounted'); */}
-      
 <ToastContainer position='top-right' autoClose={3000}/>
     </>
   );

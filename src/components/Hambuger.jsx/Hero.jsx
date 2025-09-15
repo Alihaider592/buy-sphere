@@ -11,7 +11,7 @@ const Hero = () => {
       min-h-[25vh] sm:min-h-[30vh] md:min-h-[35vh] lg:min-h-[70vh]"
     >
       {/* Left */}
-      <div className="w-full lg:w-1/2 text-white text-center lg:text-left">
+      <div className="w-full  lg:w-1/2 text-white text-center lg:text-left">
         <h1
           className="text-base sm:text-lg md:text-2xl 
           lg:text-5xl xl:text-6xl font-bold leading-snug lg:leading-tight"
@@ -26,13 +26,15 @@ const Hero = () => {
         </p>
 
         {/* Buttons */}
-        {/* <div className="mt-3 flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-2"> */}
-          <button className="w-full sm:w-auto mt-5 py-2.5 px-4 rounded-lg text-indigo-500 font-bold bg-white hover:bg-gray-200 transition text-xs sm:text-sm lg:text-base">
+        <div className="mt-3 flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-3 sm:gap-5">
+           <button className="w-full sm:w-auto py-2 px-4 rounded-lg text-indigo-500 font-bold bg-white hover:bg-gray-200 transition text-xs sm:text-sm lg:text-base">
             Shop Now
-          </button>
-          <button className="w-full sm:w-auto py-3.5 px-5 ml-8 rounded-lg border-[3px] border border-white text-white hover:bg-gray-100 hover:text-indigo-500 font-bold transition text-xs sm:text-sm lg:text-base">
-            View Deals
-          </button>
+            </button>
+           <button className="w-full border border-[3px] max-sm:border[2px] sm:w-auto py-3.5 px-7 rounded-lg border-3 border-white text-white hover:bg-gray-100 hover:text-indigo-500 font-bold transition text-xs sm:text-sm lg:text-base">
+              View Deals
+           </button>
+          </div>
+
         {/* </div> */}
       </div>
 

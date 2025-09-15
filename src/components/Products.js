@@ -1,4 +1,5 @@
-// ✅ Imports from your assets
+
+import { products as allProducts } from './Products';
 import T from '../assets/T.png';
 import T2 from '../assets/T2.png';
 import T10 from '../assets/T10.jpg';
@@ -30,7 +31,6 @@ import p4 from '../assets/p4.jpg';
 import p5 from '../assets/p5.jpg';
 import p6 from '../assets/p6.jpg';
 
-// ✅ All products (your original data)
 export const products = [
   {descrition:"Include brand, model, and key features like Automatic Chronograph, Waterproof, and Luxury.",sizes:["M","L","XL"], _id: 11, _image: [w1],subcategory:"Topwear", _price: 35, _title: "Watches", _name: "Men - Gents Watch", _Subtitle: "Smart & Stylish" ,category:"men" },
   {descrition:"comfort features, durability, and intended use (e.g., running, formal, everyday).",sizes:["M","L","XL"], _id: 20, _image: [s1], _price: 55, _title: "Shoes",subcategory:"bottom wear", _name: "Men - Sneakers", _Subtitle: "Step in Style" ,category:"men" },
@@ -64,14 +64,12 @@ export const products = [
   {descrition:"Include the brand, fit, and wash, e.g., Men's Straight Fit Dark Wash Denim Jeans.",sizes:["M","L","XL"], _id: 30, _image: [p6],subcategory:"bottom wear",  _name: "Men - Scarf", _price: 12 ,category:"kids" },
 ];
 
-// ✅ Split into patches of 6 products each
 export const productsPatch1 = products.slice(0, 6);
 export const productsPatch2 = products.slice(6, 12);
 export const productsPatch3 = products.slice(12, 18);
 export const productsPatch4 = products.slice(18, 24);
 export const productsPatch5 = products.slice(24, 30);
 
-// ✅ For easier pagination (loop through patches)
 export const productPatches = [
   productsPatch1,
   productsPatch2,
@@ -79,3 +77,28 @@ export const productPatches = [
   productsPatch4,
   productsPatch5,
 ];
+
+
+
+export const getFilteredProducts = (category = [], subcategory = [], sortType = 'default') => {
+  let filtered = allProducts
+    .filter(item => category.length === 0 || category.includes(item.category))
+    .filter(item => subcategory.length === 0 || subcategory.includes(item.subcategory));
+
+  switch (sortType) {
+    case 'low-high':
+      filtered.sort((a, b) => a._price - b._price);
+      break;
+    case 'high-low':
+      filtered.sort((a, b) => b._price - a._price);
+      break;
+    default:
+      break;
+  }
+
+  return filtered;
+};
+export const bestsellerProducts = products.filter(p => p.bestseller);
+export const shopProducts = products.filter(p => p.category !== "").slice(0, 5);
+
+

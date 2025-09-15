@@ -9,10 +9,9 @@ const Product = () => {
   const {addToCart} = useContext(ShopContaxt);
   const [size,setsize]=useState(['']);
   const { id } = useParams();
-console.log(id);
+
 
   const product = products.find((item) => String(item._id) === id);
-  console.log("Matched product:", product);
 
   if (!product) return <p>Product not found</p>;
 

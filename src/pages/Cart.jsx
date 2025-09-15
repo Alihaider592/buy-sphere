@@ -31,7 +31,7 @@ const Cart = () => {
         }
       }
     }
-console.log(tempdata);
+
     setcartdata(tempdata);
     localStorage.setItem("cart",JSON.stringify(tempdata));
   }, [cartitems, products]);
@@ -58,7 +58,6 @@ console.log(tempdata);
             </p>
           </div>
           <div className="flex relative right-4">
-          {/* <img className="w-10 h-10" src='delete.jpeg'/> */}
           </div>
           </div>
           </div>

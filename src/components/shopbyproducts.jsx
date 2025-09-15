@@ -13,7 +13,7 @@ const Shopbyproducts = ({ id, Subtitle, title, image, name }) => {
         <img className="h-60 ml-2" src={image[0]} alt={name} />
       </div>
       <p className="pt-3 pb-1 max-sm:text-sm text-lg font-bold text-center">{name}</p>
-      <p className="text-lg text-center max-sm:text-sm font-medium text-gray-600">{Subtitle}</p>
+      <p className="text-lg text-center max-sm:text-sm pb-5 font-medium text-gray-600">{Subtitle}</p>
     </Link>
   );
 };
