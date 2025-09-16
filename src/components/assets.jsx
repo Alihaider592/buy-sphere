@@ -48,11 +48,12 @@ import heart from '../assets/hearticon.jpeg'
 import backicon from '../assets/backicon.jpeg'
 import Return from '../assets/returnpolicyicon.png';
 import chang from '../assets/changeserviceicon.png';
+import Delete from '../assets/delete.jpeg';
 import customer from '../assets/customersupporticon.png'
 import dropdown from  '../assets/dropdownicon.jpeg'
 import { Cross } from 'hamburger-react'
 export const assets = {
     carticon,filltericon,gt1,k1,k2,k3,kt1,kt2,kt3,kt4,logo,p1,p2,p3,p4,p5,p6,profileicon,
     s1,s2,s3,s4,s5 ,dropdown,Cross,seachicon,T,T10,T2,T3,T4,T9,T5,T6,T8,T7,w1,w2,w3,w4,w5,w6,w7,w8,w9,heart,backicon,chang,Return,customer,
-    dullstar,star,serach
+    dullstar,star,serach,Delete
 } 
